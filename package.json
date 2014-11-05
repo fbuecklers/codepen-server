@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "codepen-server",
   "version": "1.0.0",
   "description": "A simple test Server",
   "main": "index.js",
