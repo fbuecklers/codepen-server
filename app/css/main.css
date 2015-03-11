@@ -1,0 +1,62 @@
+﻿body {
+  margin: 5px;
+}
+
+form {
+  max-width: 400px;
+}
+
+form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+form label {
+  display: inline-block;
+  width: 150px;
+  float: left;
+}
+
+form input ~ label {
+  clear: left;
+}
+
+form label ~ input {
+  float: left;
+  width: 150px;
+  margin-bottom: 5px;
+}
+
+form input[type="submit"] {
+  margin-left: 150px;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  white-space: nowrap;
+}
+
+table th .glyphicon {
+  font-size: 10px;
+  visibility: hidden;
+}
+
+table th:hover {
+  cursor: pointer;
+}
+
+table th:hover .glyphicon {
+  visibility: visible;
+}
+
+table td .glyphicon {
+  margin: 3px;
+}
+
+table td .glyphicon:hover {
+  cursor: pointer;
+}

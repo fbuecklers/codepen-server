@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Unser Adressbuch</title> 
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />  
+  <link rel="stylesheet" href="css/main.css" />  
+</head>
+<body>
+
+<h1>A Editable Table</h1>
+
+<form>
+  <label>
+    <input type="radio" name="gender" value="Frau" required> 
+    Frau
+  </label>
+  <label>
+    <input type="radio" name="gender" value="Herr" required>
+    Herr
+  </label>
+  
+  <label for="firstname">Vorname:</label>
+  <input id="firstname" type="text" name="firstname" value="">
+  
+  <label for="lastname">Nachname:</label>
+  <input id="lastname" type="text" name="lastname" value="">
+  
+  <label for="street">Straße:</label>
+  <input id="street" type="text" name="street" value="">
+  
+  <label for="number">Nr.:</label>
+  <input id="number" type="text" name="number" value="">
+  
+  <label for="zip">Postleitzahl:</label>
+  <input id="zip" type="text" name="zip" size="5" value="">
+  
+  <label for="email">Email:</label>
+  <input id="email" type="email" name="email" value="">
+  
+  <input type="submit" data-add-value="Hinzufügen" data-edit-value="Bearbeiten">
+</form>
+
+<div id="table"></div>
+
+<script type="text/template" id="tableTemplate">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+        Anrede
+        <span class="glyphicon glyphicon-arrow-down"></span>
+      </th>
+      <th>
+        Vorname
+        <span class="glyphicon glyphicon-arrow-down"></span>
+      </th>
+      <th>
+        Nachname
+        <span class="glyphicon glyphicon-arrow-down"></span>
+      </th>
+      <th>
+        Straße
+        <span class="glyphicon glyphicon-arrow-down"></span>
+      </th>
+      <th>
+        Nr.
+        <span class="glyphicon glyphicon-arrow-down"></span>
+      </th>
+      <th>
+        Postleitzahl
+        <span class="glyphicon glyphicon-arrow-down"></span>
+      </th>
+      <th>
+        Email
+        <span class="glyphicon glyphicon-arrow-down"></span>
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table> 
+</script>
+  
+<script type="text/template" id="trTemplate">
+  <td><input type="checkbox"></td>
+  <td><%- gender %></td>
+  <td><%- firstname %></td>
+  <td><%- lastname %></td>
+  <td><%- street %></td>
+  <td><%- number %></td>
+  <td><%- zip %></td>
+  <td><%- email %></td>
+  <td>
+    <span class="glyphicon glyphicon-pencil"></span>
+    <span class="glyphicon glyphicon-trash"></span>
+  </td>
+</script>
+<script data-main="js/config" src="node_modules/requirejs/require.js"></script>
+</body>
+</html>
